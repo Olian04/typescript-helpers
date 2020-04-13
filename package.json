@@ -1,0 +1,25 @@
+{
+  "name": "@olian/typescript-helpers",
+  "version": "1.0.1",
+  "description": "A collection of typescript functions and structures that I usually end up needing when developing.",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf ./dist && tsc",
+    "lint": "tslint --fix -c ./tslint.json 'src/**/*.ts'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Olian04/typescript-helpers.git"
+  },
+  "keywords": [],
+  "author": "Olian04",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Olian04/typescript-helpers/issues"
+  },
+  "homepage": "https://github.com/Olian04/typescript-helpers#readme",
+  "dependencies": {
+    "tslint": "^6.1.1",
+    "typescript": "^3.8.3"
+  }
+}
