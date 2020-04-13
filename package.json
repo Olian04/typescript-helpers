@@ -1,6 +1,6 @@
 {
   "name": "@olian/typescript-helpers",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A collection of typescript functions and structures that I usually end up needing when developing.",
   "main": "index.js",
   "scripts": {
