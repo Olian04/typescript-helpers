@@ -7,5 +7,10 @@ npm i @olian/typescript-helpers
 ```
 
 ```ts
-import { DeepPartial, Record, useValueOrFallback } from '@olian/typescript-helpers';
+import {
+  DeepPartial,
+  Record,
+  useValueOrFallback,
+  Maybe
+} from '@olian/typescript-helpers';
 ```

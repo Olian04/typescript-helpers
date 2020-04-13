@@ -1,11 +1,12 @@
 {
   "name": "@olian/typescript-helpers",
-  "version": "1.0.3",
+  "version": "2.0.1",
   "description": "A collection of typescript functions and structures that I usually end up needing when developing.",
   "main": "dist/api.js",
   "type": "dist/api.d.ts",
   "types": "dist/api.d.ts",
   "scripts": {
+    "prepublishOnly": "npm run lint && npm run build",
     "build": "rm -rf ./dist && tsc",
     "lint": "tslint --fix -c ./tslint.json 'src/**/*.ts'"
   },
