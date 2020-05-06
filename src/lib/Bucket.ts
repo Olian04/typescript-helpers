@@ -52,6 +52,12 @@ export class Bucket<T> implements IBucket<T> {
 
     this.stack.push(value);
   }
+  [Symbol.iterator]() {
+    // Typescript freaks out if this isn't here....
+    // Even though Symbol.asyncIterator is present
+    // and even though Symbol.iterator returns an async iterator
+    return this;
+  }
   [Symbol.asyncIterator]() {
     return this;
   }

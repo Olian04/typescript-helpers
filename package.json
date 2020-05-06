@@ -1,6 +1,6 @@
 {
   "name": "@olian/typescript-helpers",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "A collection of typescript functions and structures that I usually end up needing when developing.",
   "main": "dist/api.js",
   "type": "dist/api.d.ts",
