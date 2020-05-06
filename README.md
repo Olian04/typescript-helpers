@@ -11,6 +11,7 @@ import {
   DeepPartial,
   Record,
   useValueOrFallback,
-  Maybe
+  Maybe,
+  Bucket
 } from '@olian/typescript-helpers';
 ```
