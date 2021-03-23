@@ -6,10 +6,11 @@
   "type": "dist/api.d.ts",
   "types": "dist/api.d.ts",
   "scripts": {
-    "prepublishOnly": "npm run lint && npm run build",
+    "prepublishOnly": "npm run lint && npm run test && npm run build",
+    "test": "mocha --recursive -r ts-node/register 'src/**/*.spec.ts' ",
     "build": "rm -rf ./dist && tsc",
-    "lint": "tslint --fix -c ./tslint.json 'src/**/*.ts'",
-    "demo": "ts-node demo.ts"
+    "lint:nofix": "tslint -c ./tslint.json 'src/**/*.ts'",
+    "lint": "tslint --fix -c ./tslint.json 'src/**/*.ts'"
   },
   "repository": {
     "type": "git",
@@ -22,11 +23,13 @@
     "url": "https://github.com/Olian04/typescript-helpers/issues"
   },
   "homepage": "https://github.com/Olian04/typescript-helpers#readme",
-  "dependencies": {
+  "devDependencies": {
+    "@types/chai": "^4.2.15",
+    "@types/mocha": "^8.2.2",
+    "chai": "^4.3.4",
+    "mocha": "^8.3.2",
+    "ts-node": "^8.10.1",
     "tslint": "^6.1.1",
     "typescript": "^3.8.3"
-  },
-  "devDependencies": {
-    "ts-node": "^8.10.1"
   }
 }
