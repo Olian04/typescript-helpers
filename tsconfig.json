@@ -1,24 +1,16 @@
 {
   "compilerOptions": {
-      "target": "es6",
-      "module": "commonjs",
-      "lib": [
-          "esnext",
-          "dom"
-      ],
-      "outDir": "dist/",
-      "declaration": true,
-      "allowSyntheticDefaultImports": true,
-      "esModuleInterop": true,
-      "noImplicitReturns": true,
-      "noImplicitThis": true,
-      "strict": true
+    "target": "es6",
+    "module": "commonjs",
+    "lib": ["esnext", "dom"],
+    "outDir": "dist/",
+    "declaration": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "strict": true
   },
-  "include": [
-      "src/**/*.ts",
-  ],
-  "exclude": [
-      "node_modules",
-      "src/**/*.spec.ts"
-  ]
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "src/**/*.spec.ts"]
 }
