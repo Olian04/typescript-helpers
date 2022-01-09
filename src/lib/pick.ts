@@ -1,4 +1,4 @@
-import { ExpandType } from "./ExpandType";
+import { ExpandType } from './ExpandType';
 
 /**
  * Create subsets of objects in a type-safe way
