@@ -1,4 +1,4 @@
-type Func = (...args: any[]) => any;
+import { Func } from './Func';
 
 /**
  * DeepPartial is used to apply the Partial type recursively to all applicable properties of an object.
@@ -9,11 +9,11 @@ type Func = (...args: any[]) => any;
  *     bar: number;
  *   };
  * };
- * type B =  DeepPartial<A> /* === {
+ * type B =  DeepPartial<A> /* {
  *   foo?: {
  *     bar?: number;
  *   };
- * }*\/
+ * }
  * ```
  */
 export type DeepPartial<T extends object> = {
