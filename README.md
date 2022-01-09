@@ -10,6 +10,7 @@ import {
   Record,
   useValueOrFallback,
   Maybe,
-  Bucket
+  Bucket,
+  ExpandType
 } from '@olian/typescript-helpers';
 ```
