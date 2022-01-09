@@ -1,9 +1,9 @@
 {
   "name": "@olian/typescript-helpers",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "description": "A collection of typescript functions and structures that I usually end up needing when developing.",
+  "type": "commonjs",
   "main": "dist/api.js",
-  "type": "dist/api.d.ts",
   "types": "dist/api.d.ts",
   "scripts": {
     "prepublishOnly": "npm run lint && npm run test && npm run build",
