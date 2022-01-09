@@ -6,11 +6,14 @@ Install: [`npm i @olian/typescript-helpers`](https://www.npmjs.com/package/@olia
 
 ```ts
 import {
+  pick,
+  safePick,
+  useValueOrFallback,
   DeepPartial,
   Record,
-  useValueOrFallback,
   Maybe,
   Bucket,
-  ExpandType
+  ExpandType,
+  Func,
 } from '@olian/typescript-helpers';
 ```
