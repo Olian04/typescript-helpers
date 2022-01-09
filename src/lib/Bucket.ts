@@ -7,6 +7,7 @@ export interface IBucket<T> extends AsyncGenerator<T, never, unknown> {
 /**
  * A bucket is used to convert any asynchronously occurring event into an async generator.
  *
+ * ```ts
  * (async () => {
  *   const bucket = new Bucket<number>();
  *
@@ -18,6 +19,7 @@ export interface IBucket<T> extends AsyncGenerator<T, never, unknown> {
  *     console.log(timeStamp);
  *   }
  * })();
+ * ```
  */
 export class Bucket<T> implements IBucket<T> {
   private stack: T[];

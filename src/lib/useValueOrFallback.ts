@@ -3,6 +3,15 @@ import { Maybe } from './maybe';
 /**
  * Used to extract a value that might be undefined from an object that might be undefined, and if any of them are undefined use a fallback value.
  *
+ * ```ts
+ * import { someObject } from '...';
+ * const fallback = {
+ *    foo: 42
+ * }
+ *
+ * const foo = useValueOrFallback(someObject, 'foo', fallback.foo)
+ * ```
+ *
  * @param obj The source object
  * @param key The key used to to extract the value
  * @param fallback The value to use if no valid value was found or the source object was undefined
