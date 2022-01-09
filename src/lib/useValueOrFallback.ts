@@ -6,10 +6,10 @@ import { Maybe } from './maybe';
  * ```ts
  * import { someObject } from '...';
  * const fallback = {
- *    foo: 42
- * }
+ *    foo: 42,
+ * };
  *
- * const foo = useValueOrFallback(someObject, 'foo', fallback.foo)
+ * const foo = useValueOrFallback(someObject, 'foo', fallback.foo); // 42
  * ```
  *
  * @param obj The source object

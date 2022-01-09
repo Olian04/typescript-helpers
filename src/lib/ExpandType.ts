@@ -12,7 +12,7 @@
  *     light: string;
  *     dark: string;
  * }>;
- * type B = ExpandType<A> /* === {
+ * type B = ExpandType<A> /* {
  *   primary: {
  *     light: string;
  *     dark: string;
@@ -21,7 +21,7 @@
  *     light: string;
  *     dark: string;
  *   };
- * };*\/
+ * };
  * ```
  */
 export type ExpandType<T> = T extends object

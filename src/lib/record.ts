@@ -10,7 +10,7 @@
  *   question: 'The answer to life, the universe and everything',
  *   answer: 42,
  * });
- * myRecord.answer // === 42
+ * myRecord.answer // 42
  * ```
  */
 export class Record<T extends Record<T>> {
