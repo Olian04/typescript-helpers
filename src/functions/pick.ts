@@ -17,6 +17,8 @@ import { Flat } from '../types/Flat';
  * }
  * ```
  */
-export const pick = <T extends object, K extends keyof T>(obj: T, ...include: K[]) => Object.fromEntries(
-  Object.entries(obj).filter(([k]) => include.indexOf(k as K) > -1)
-) as Flat<Pick<T, K>>;
+export const pick = <T extends object, K extends keyof T>(obj: T, ...include: K[]) =>
+  include.reduce((res, k) => {
+    res[k] = obj[k];
+    return res;
+  }, {} as any) as Flat<Pick<T, K>>;

@@ -19,4 +19,7 @@ import { pick } from './pick';
  * ```
  */
 export const safePick = <T extends object, K extends keyof T>(obj: Partial<T>, fallback: T, ...include: K[]) =>
-  Object.assign(pick(fallback, ...include), pick(obj, ...include)) as Flat<Pick<T, K>>;
+  include.reduce((res, k) => {
+    res[k] = k in obj ? obj[k] : fallback[k];
+    return res;
+  }, {} as any) as Flat<Pick<T, K>>;
