@@ -1,8 +1,14 @@
-export { DeepPartial } from './lib/deepPartial';
-export { Record } from './lib/record';
-export { useValueOrFallback } from './lib/useValueOrFallback';
-export { Maybe } from './lib/maybe';
-export { Bucket } from './lib/Bucket';
-export { ExpandType } from './lib/ExpandType';
-export { Func } from './lib/Func';
-export { pick, safePick } from './lib/pick';
+// Types
+export { DeepPartial } from './types/DeepPartial';
+export { Maybe } from './types/Maybe';
+export { Flat } from './types/Flat';
+export { Func } from './types/Func';
+
+// Classes
+export { DataClass } from './classes/DataClass';
+export { Bucket } from './classes/Bucket';
+
+// Functions
+export { useValueOrFallback } from './functions/useValueOrFallback';
+export { pick } from './functions/pick';
+export { safePick } from './functions/safePick';

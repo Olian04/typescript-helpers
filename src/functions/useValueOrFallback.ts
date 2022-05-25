@@ -1,4 +1,4 @@
-import { Maybe } from './maybe';
+import { Maybe } from '../types/Maybe';
 
 /**
  * Used to extract a value that might be undefined from an object that might be undefined, and if any of them are undefined use a fallback value.

@@ -3,7 +3,7 @@
  *
  * ```ts
  * type A =  string;
- * type B =  Maybe<A> // A | undefined
+ * type B =  Maybe<A> // string | undefined
  * ```
  */
 export type Maybe<T> = T | undefined;
