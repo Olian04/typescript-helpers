@@ -1,6 +1,6 @@
 // Inspired by: https://stackoverflow.com/a/60962966/6224823
 
-export interface IBucket<T> extends AsyncGenerator<T, never, unknown> {
+interface IBucket<T> extends AsyncGenerator<T, never, unknown> {
   push(v: T): void;
 }
 
@@ -8,17 +8,15 @@ export interface IBucket<T> extends AsyncGenerator<T, never, unknown> {
  * A bucket is used to convert any asynchronously occurring event into an async generator.
  *
  * ```ts
- * (async () => {
- *   const bucket = new Bucket<number>();
+ * const bucket = new Bucket<number>();
  *
- *   setInterval(() => {
- *     bucket.push(Date.now());
- *   }, 1000);
+ * setInterval(() => {
+ *   bucket.push(Date.now());
+ * }, 1000);
  *
- *   for await (const timeStamp of bucket) {
- *     console.log(timeStamp);
- *   }
- * })();
+ * for await (const timeStamp of bucket) {
+ *   console.log(timeStamp);
+ * }
  * ```
  */
 export class Bucket<T> implements IBucket<T> {
