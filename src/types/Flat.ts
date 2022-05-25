@@ -1,4 +1,6 @@
-// Source: https://stackoverflow.com/questions/57683303/how-can-i-see-the-full-expanded-contract-of-a-typescript-type/57683652#57683652
+// Inspiration: https://stackoverflow.com/questions/57683303/how-can-i-see-the-full-expanded-contract-of-a-typescript-type/57683652#57683652
+
+import { Func } from './Func';
 
 /**
  * Flattens a type, so that it isn't defined by type-aliases.
@@ -25,5 +27,7 @@
  * ```
  */
 export type Flat<T> = T extends object
-  ? T extends infer O ? { [K in keyof O]: Flat<O[K]> } : never
+  ? T extends infer O ? {
+    [K in keyof O]: O[K] extends Func ? O[K] : Flat<O[K]>
+  } : never
   : T;
