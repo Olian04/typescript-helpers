@@ -8,7 +8,7 @@ describe('safePick', () => {
     const fallback = {
       foo: 42,
       bar: 'biz',
-      boz: () => {},
+      boz: () => {/* --- */},
     };
     const original = {
       foo: 3
@@ -22,9 +22,9 @@ describe('safePick', () => {
     const fallback = {
       foo: 42,
       bar: 'biz',
-      boz: () => {},
+      boz: () => {/* --- */},
     };
-    const original = {};
+    const original = {/* --- */};
     const result = safePick(original, fallback, 'foo');
     expect(result.foo).to.equal(fallback.foo);
     expect(typeof result.foo).to.equal(typeof fallback.foo);
@@ -34,11 +34,11 @@ describe('safePick', () => {
     const fallback = {
       foo: 42,
       bar: 'biz',
-      boz: () => {},
+      boz: () => {/* --- */},
     };
     const original = {
       foo: 3,
-      boz: () => {},
+      boz: () => {/* --- */},
     };
     const result = safePick(original, fallback, 'foo', 'boz');
     expect(result.foo).to.equal(original.foo);
@@ -51,9 +51,9 @@ describe('safePick', () => {
     const fallback = {
       foo: 42,
       bar: 'biz',
-      boz: () => {},
+      boz: () => {/* --- */},
     };
-    const original = {};
+    const original = {/* --- */};
     const result = safePick(original, fallback, 'foo', 'boz');
     expect(result.foo).to.equal(fallback.foo);
     expect(typeof result.foo).to.equal(typeof fallback.foo);

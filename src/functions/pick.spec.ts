@@ -17,7 +17,7 @@ describe('pick', () => {
     const original = {
       foo: 42,
       bar: 'biz',
-      boz: () => {},
+      boz: () => {/* --- */},
     };
     const result = pick(original, 'foo', 'boz');
     expect(result.foo).to.equal(original.foo);
